@@ -1,0 +1,44 @@
+[Print Settings]
+cups-HPPrintQuality=ProRes1200
+cups-HPTHDigit=0
+cups-HPEdgeToEdge=False
+cups-job-sheets=none,none
+output-bin=None
+print-at-time=
+print-at=now
+cups-HPPaperSource=AutomaticallySelect
+cups-Duplex=DuplexNoTumble
+cups-OutputBin=None
+cups-number-up=1
+cups-HPEconoMode=False
+cups-HPPinPrnt=False
+duplex=horizontal
+cover-after=none
+cups-HPSEDigit=0
+cover-before=none
+evince-print-setting-page-size=false
+evince-print-setting-page-scale=1
+media-type=Plain
+cups-job-priority=50
+cups-MediaType=Plain
+evince-print-setting-page-autorotate=true
+printer=fab5517clr1
+cups-HPFIDigit=0
+cups-HPFTDigit=0
+
+quality=normal
+cups-ColorModel=RGB
+cups-InputSlot=Auto
+cups-OutputMode=Normal
+default-source=Auto
+
+[Page Setup]
+PPDName=Letter
+DisplayName=US Letter
+Width=215.89999389648438
+Height=279.39999389648438
+MarginTop=6.3499999999999996
+MarginBottom=14.224
+MarginLeft=6.3499999999999996
+MarginRight=6.3499999999999996
+Orientation=portrait
