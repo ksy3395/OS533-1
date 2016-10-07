@@ -1,0 +1,20 @@
+A description of what you did and how you chose to test it.
+We followed the instructions given to us on GitHub and used the step-by-step commands shown to us on the article. We also did some research on assembly language x86 coding to understand 
+what each register stands for and do the assembly files. In the process, we understood how context switching works and how threads are allocated in memory. We learned how to swap a 
+set of established threads as well as an established thread (thread_switch) with an unestablished thread (thread_start). We printed out several statements which show the control flow 
+of the program and the output of the power function (which is our computation function).
+
+What would be an elegant way to create and manage an arbitrary number of threads?
+As more and more threads get created we need to store its TCBs and stacks in memory. We must perform context switching (this is where the scheduler will play a very important role) and force
+a thread to go to sleep so others can execute, giving a chance for all threads to perform their function. Once threads have completed their function, we can free this memory up so other 
+threads stack space and TCB can be created
+
+Can you think of any uses for even the very simple form of threading we've developed in this assignment? What extra features could we add to make it more useful?
+As shown by this program, we can use this kind of simple threading to program mathematical computations and simple input-output programs. We could implement shared 
+access of variables and add locks or mutexes to make it more efficient and useful.
+
+Memory management can be a challenge in threading systems. When is it safe to free a thread's stack? What about its thread control block? How would this change if we wanted to return results 
+from our threads, or implement a join procedure? (see the Birrell article for a description of join)
+Once a thread is done with its tasks and functions, we can free the thread's stack and its control block as well as the stacks and control blocks of all its children (if it has any due to JOIN). 
+If we wanted to return results from our threads or implement a join procedure, the parent thread should not terminate but be put on wait (and not on sleep) till it gets the value or till its 
+child or children terminate. 
